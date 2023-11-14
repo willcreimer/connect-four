@@ -1,6 +1,6 @@
 {
   "name": "connect-four",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "homepage": "https://willcreimer.github.io/connect-four",
   "type": "module",
