@@ -1,0 +1,55 @@
+#players > li{
+    font-size: 30px;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    color: white;
+}
+
+.player{
+    text-shadow: 0 0 20px var(--player-color);
+}
+
+li:has(> .player1){
+    --player-color: var(--player1-color);
+}
+
+li:has(> .player2){
+    --player-color: var(--player2-color);
+}
+
+#players .edit-btn{
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    transition: transform 100ms ease-in-out ;
+}
+
+#players .edit-btn:hover{
+    transform: scale(1.1);
+}
+
+.player-name{
+    outline: none;
+    padding: 10px;
+    max-width: 180px;
+    font-size: 30px;
+    text-align: right;
+    border: none;
+}
+
+#players.highlight-players li:not(.active):has(input){
+    background-color: color-mix(in srgb, var(--board-color) 70%, black);
+    box-shadow: 0 0 20px 2px color-mix(in srgb, rgb(85, 85, 85) 60%, var(--player-color)),
+                inset 0 0 10px 2px color-mix(in srgb, rgb(85, 85, 85) 60%, var(--player-color));
+}
+
+#players.highlight-players input.player-name{
+    background: none;
+}
+
+#players.highlight-players li.active{
+    box-shadow: 0 0 10px 2px color-mix(in srgb, rgb(255, 255, 255) 20%, var(--player-color)),
+                inset 0 0 5px 2px color-mix(in srgb, rgb(255, 255, 255) 20%, var(--player-color));
+}

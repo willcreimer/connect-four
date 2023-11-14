@@ -1,0 +1,19 @@
+#log{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    overflow: auto;
+    list-style: none;
+    font-size: 20px;
+    padding: 5px 50px;
+    border: 2px solid var(--border-color);
+
+    .player1{
+        color: var(--player1-color);
+    }
+
+    .player2{
+        color: var(--player2-color);
+    }
+}

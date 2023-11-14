@@ -1,0 +1,55 @@
+#root {
+  --board-color: rgb(70, 70, 70);
+  --border-color: rgb(98, 98, 98);
+  --board-square-color: var(--background-color);
+  --player1-color: rgb(75, 249, 255);
+  --player2-color: rgb(255, 196, 0);
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+*{
+  margin: 0;
+}
+
+#main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#main > #game-wrapper,
+#main > #players,
+#main > #log{
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.518);
+}
+
+#players{
+  min-width: 600px;
+  justify-content: space-around;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  background-color: var(--board-color);
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+}
+
+#game-wrapper{
+  position: relative;
+}
+
+#header,
+#game-over > h2{
+  font-size: 64px;
+  background: linear-gradient(0.25turn, var(--player1-color), var(--player2-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
