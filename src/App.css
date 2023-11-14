@@ -30,7 +30,6 @@
 }
 
 #players{
-  min-width: 600px;
   justify-content: space-around;
   display: grid;
   gap: 40px;

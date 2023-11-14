@@ -2,7 +2,7 @@ import { useState } from 'react'
 import GameBoard from './components/GameBoard'
 import Player from './components/Player'
 import Log from './components/Log'
-import { checkForWin } from './components/board-state-checker.js'
+import { checkForWin } from './board-state-checker.js'
 import GameOver from './components/GameOver.jsx'
 
 import './App.css'
