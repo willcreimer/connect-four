@@ -1,6 +1,7 @@
 #players > li{
-    font-size: 30px;
+    font-size: min(1.6em, 6dvw);
     display: flex;
+    flex-grow: 0;
     justify-content: right;
     gap: 20px;
     color: white;
@@ -37,6 +38,7 @@ li:has(> .player2){
     font-size: 1em;
     text-align: right;
     border: none;
+    text-wrap: nowrap;
 }
 
 #players.highlight-players li:not(.active):has(input){

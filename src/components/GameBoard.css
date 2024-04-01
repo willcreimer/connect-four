@@ -4,23 +4,24 @@
 }
 
 #game-board{
-  padding: 0 20px;
-  min-height: 200px;
-  min-width: 200px;
+  width: min(60dvh, 95vw);
+  aspect-ratio: 7/6;
+  padding: 0 10px;
   background-color: var(--board-color);
 
   border: 2px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: 10px;
 
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
 }
 
 #game-board > li > ol{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 15px;
 }
 
 #game-board li{
@@ -28,7 +29,7 @@
 }
 
 #game-board > li{
-  padding: 20px 0;
+  padding: 10px 0;
   transition: transform 200ms;
 }
 
@@ -41,6 +42,9 @@
               0 0 10px 2px inset rgba(197, 197, 197, 0.609); */
 }
 
+.board-row{
+}
+
 .board-row:has(> .board-square.player1),
 .board-row:has(> .board-square.player2){
   border-radius: 50%;
@@ -51,8 +55,8 @@
 }
 
 .board-square{
-  min-width: min(8vh, 8vw);
-  aspect-ratio: 1;
+  height: 100%;
+  aspect-ratio: 1/1;
   border: 2px solid var(--board-square-color);
   border-radius: 50%;
 
